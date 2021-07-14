@@ -6,12 +6,12 @@ namespace CalcSophia
     {
         private static void Main(string[] args)
         {
-            int nmrAnterior, nmrPosterior, resultadoFinal = 0;
+            float nmrAnterior, nmrPosterior, resultadoFinal = 0;
 
             Console.WriteLine("Digite um numero inteiro para calcular");
-            nmrAnterior = int.Parse(Console.ReadLine());
+            nmrAnterior = float.Parse(Console.ReadLine());
             Console.WriteLine("Digite outro numero inteiro para calcular com o anterior");
-            nmrPosterior = int.Parse(Console.ReadLine());
+            nmrPosterior = float.Parse(Console.ReadLine());
 
             Console.WriteLine("Coloque o simbolo que vc gostaria de calcular, simbolos disponiveis: {+, -, *, /}");
 
@@ -20,19 +20,19 @@ namespace CalcSophia
             switch (simbolo)
             {
                 case '+':
-                    resultadoFinal = nmrAnterior + nmrPosterior;
+                    resultadoFinal = (float)Math.Round(nmrAnterior + nmrPosterior, 4);
                     break;
 
                 case '-':
-                    resultadoFinal = nmrAnterior - nmrPosterior;
+                    resultadoFinal = (float)Math.Round(nmrAnterior - nmrPosterior, 4);
                     break;
 
                 case '*':
-                    resultadoFinal = nmrAnterior * nmrPosterior;
+                    resultadoFinal = (float)Math.Round(nmrAnterior * nmrPosterior, 4);
                     break;
 
                 case '/':
-                    resultadoFinal = nmrAnterior - nmrPosterior;
+                    resultadoFinal = (float)Math.Round(nmrAnterior - nmrPosterior, 4);
                     break;
 
                 default:
